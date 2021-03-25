@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -17,5 +19,21 @@ public class Main {
             }
         }
         System.out.println(sum / number);
+        System.out.println("--------------------------------------------------------");
+
+        bubbleSort(array);
+    }
+
+    public static void bubbleSort(double[] array) {
+        for (int i = array.length - 1; i > 0; i--) {
+            for (int j = 0; j < i; j++) {
+                if (array[j] > array[j + 1]) {
+                    double temp = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = temp;
+                }
+            }
+            System.out.println(Arrays.toString(array));
+        }
     }
 }
